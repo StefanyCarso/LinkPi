@@ -1,3 +1,5 @@
+📁 LinkPi - Página de Links Úteis
+
 📝 Descrição
 O LinkPi é uma página web simples e responsiva que centraliza links importantes e documentos do projeto Shivazen em um único local de fácil acesso.
 
