@@ -1,3 +1,26 @@
+:root {
+    /* Gradientes */
+    --bg-gradient-start: #f5f7fa;
+    --bg-gradient-end: #c3cfe2;
+    --primary-gradient-start: #8b5c00;
+    --primary-gradient-end: #b48c4c;
+    
+    /* Cores sólidas */
+    --white: #ffffff;
+    --card-bg: #f8f9fa;
+    --card-hover-bg: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #6c757d;
+    --border-color: #e9ecef;
+    
+    /* Sombras */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    
+    /* Bordas */
+    --border-white: #ffffff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +29,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,15 +40,15 @@ body {
 .container {
     max-width: 800px;
     width: 100%;
-    background: white;
+    background: var(--white);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--shadow-light);
     overflow: hidden;
 }
 
 header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    color: var(--white);
     padding: 30px;
     text-align: center;
 }
@@ -41,8 +64,8 @@ h1 {
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--border-white);
+    box-shadow: 0 4px 10px var(--shadow-medium);
 }
 
 .logo img {
@@ -58,32 +81,32 @@ h1 {
 .link-card {
     display: flex;
     align-items: center;
-    background: #f8f9fa;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
     margin-bottom: 20px;
     text-decoration: none;
-    color: #333;
+    color: var(--text-primary);
     transition: all 0.3s ease;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border-color);
 }
 
 .link-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    box-shadow: 0 5px 15px var(--shadow-light);
+    background: var(--card-hover-bg);
 }
 
 .icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
-    color: white;
+    color: var(--white);
     font-size: 1.5rem;
 }
 
@@ -99,15 +122,15 @@ h1 {
 
 .link-desc {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: var(--text-secondary);
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    color: #6c757d;
+    color: var(--text-secondary);
     font-size: 0.8rem;
-    border-top: 1px solid #e9ecef;
+    border-top: 1px solid var(--border-color);
 }
 
 @media (max-width: 600px) {
